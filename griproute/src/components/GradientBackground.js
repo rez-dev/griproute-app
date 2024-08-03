@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 const GradientBackground = ({ children }) => {
   return (
     <LinearGradient
-      colors={['#2F8A8A', '#FFFFFF', '#2F8A8A']}
+      colors={['#0895b3', '#FFFFFF', '#0895b3']}
       start={{ x: 0, y: 0 }}
       end={{ x: 0, y: 1 }}
       locations={[0, 0.5, 1]}

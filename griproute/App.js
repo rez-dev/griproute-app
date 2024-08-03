@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './src/screens/HomeScreen';
 import { useFonts } from 'expo-font';
 import { View, Text} from 'react-native';
+import MenuScreen from './src/screens/MenuScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,7 +15,7 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     'FiraSans-Regular': require('./assets/fonts/FiraSans-Regular.ttf'),
     'FiraSans-Bold': require('./assets/fonts/FiraSans-Bold.ttf'),
-    'Helvetica': require('./assets/fonts/helvetica-rounded-bold-5871d05ead8de.otf'),
+    'Helvetica-Regular': require('./assets/fonts/helvetica-rounded-bold-5871d05ead8de.otf'),
     'Helvetica-Bold': require('./assets/fonts/Helvetica-Bold.ttf'),
   });
 
@@ -31,7 +32,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={HomeScreen} />
-        {/* <Stack.Screen name="Details" component={DetailsScreen} /> */}
+        <Stack.Screen name="Menu" component={MenuScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
