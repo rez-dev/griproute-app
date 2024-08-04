@@ -11,7 +11,7 @@ const MenuScreen = () => {
   return (
     <BackgroundImageComponent>
       <SafeAreaView style={styles.container}>
-        <TouchableOpacity style={styles.touchableArea} onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity style={styles.touchableArea} onPress={() => navigation.navigate('Camera')}>
           <Card>
             <Text style={{fontFamily: 'Helvetica-Regular', fontSize: 40}}>MENU</Text>
           </Card>
