@@ -19,7 +19,6 @@ import ProfileScreen from './src/screens/ProfileScreen';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 // import Ionicons from '@expo/vector-icons/Ionicons';
 import { PhotoProvider } from './PhotoContext';
-import ChatGPTExample from './src/screens/ChatGPTExample';
 
 const Stack = createNativeStackNavigator();
 
@@ -115,16 +114,6 @@ export default function App() {
             )
           }}}/>
           <Tab.Screen name="Perfil" component={ProfileScreen} options={{tabBarIcon: ({focused}) => {
-            return (
-              <View style={{alignItems: "center", justifyContent: "center"}}>
-                {/* <Entypo name="home" size={24} color={focused ? "#427800" : "#748c94"} /> */}
-                <Ionicons name="person" size={24} color={focused ? "#427800" : "#748c94"}/>
-                {/* <SimpleLineIcons name="menu" size={24} color={focused ? "#427800" : "#748c94"}/> */}
-                {/* <Text style={{color: focused ? "#427800" : "#748c94", fontFamily: "Helvetica-Regular"}}>Menú</Text> */}
-              </View>
-            )
-          }}}/>
-          <Tab.Screen name="GPT" component={ChatGPTExample} options={{tabBarIcon: ({focused}) => {
             return (
               <View style={{alignItems: "center", justifyContent: "center"}}>
                 {/* <Entypo name="home" size={24} color={focused ? "#427800" : "#748c94"} /> */}
