@@ -1,25 +1,19 @@
 import React from 'react';
 import { Text, Image, View, SafeAreaView, TouchableOpacity } from 'react-native';
+import BackgroundImageComponent from '../components/BackgroundImage';
 import { StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import BackgroundImageComponent from '../components/BackgroundImage';
+import Card from '../components/Card';
 
-const HomeScreen = () => {
+const ProfileScreen = () => {
   const navigation = useNavigation();
-
+  
   return (
     <BackgroundImageComponent>
       <SafeAreaView style={styles.container}>
-        {/* <TouchableOpacity style={styles.touchableArea} onPress={() => navigation.navigate('Menu')}> */}
-        {/* <TouchableOpacity style={styles.touchableArea}> */}
-          <View style={styles.centerContent}>
-            <Image source={require('../../assets/gp_color_white.png')} style={styles.logoImage} />
-            <Text style={styles.welcomeText}>GripRoute</Text>
-            <Text style={styles.designedByText}>Desarrollado por</Text>
-          <Text style={styles.designedByText}>Ascendify Solutions</Text>
-          <Image source={require('../../assets/as_color.png')} style={styles.companyLogo} />
-          </View>
-        {/* </TouchableOpacity> */}
+          <Card>
+            <Text style={{fontFamily: 'Helvetica-Regular', fontSize: 40}}>Profile</Text>
+          </Card>
       </SafeAreaView>
     </BackgroundImageComponent>
   );
@@ -27,10 +21,6 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'space-between',
-  },
-  centerContent: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -41,6 +31,11 @@ const styles = StyleSheet.create({
     fontFamily: 'FiraSans-Bold',
     textAlign: 'center',
     marginTop: 20,
+  },
+  centerContent: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   logoImage: {
     width: 200,
@@ -59,13 +54,10 @@ const styles = StyleSheet.create({
   },
   companyLogo: {
     width: 100,
-    height: 70,
+    height: 50,
     resizeMode: 'contain',
     marginTop: 10,
-  },
-  touchableArea: {
-    flex: 1,
   }
 });
 
-export default HomeScreen;
+export default ProfileScreen;

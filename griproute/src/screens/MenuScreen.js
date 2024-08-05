@@ -11,7 +11,8 @@ const MenuScreen = () => {
   return (
     <BackgroundImageComponent>
       <SafeAreaView style={styles.container}>
-        <TouchableOpacity style={styles.touchableArea} onPress={() => navigation.navigate('Camera')}>
+        {/* <TouchableOpacity style={styles.touchableArea} onPress={() => navigation.navigate('Camera')}> */}
+        {/* <TouchableOpacity style={styles.touchableArea}> */}
           <Card>
             <Text style={{fontFamily: 'Helvetica-Regular', fontSize: 40}}>MENU</Text>
           </Card>
@@ -21,7 +22,7 @@ const MenuScreen = () => {
           <Card>
           <Text style={{fontFamily: 'Helvetica-Regular', fontSize: 40}}>MENU</Text>
           </Card>
-        </TouchableOpacity>
+        {/* </TouchableOpacity> */}
       </SafeAreaView>
     </BackgroundImageComponent>
   );
