@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#fff',
     borderRadius: 20,
-    width: 300, // Ancho ajustado según las necesidades de diseño
+    width: 320, // Ancho ajustado según las necesidades de diseño
     height: 200, // Altura ajustada según las necesidades de diseño
     justifyContent: 'center',
     alignItems: 'center',

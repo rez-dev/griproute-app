@@ -11,9 +11,7 @@ const ProfileScreen = () => {
   return (
     <BackgroundImageComponent>
       <SafeAreaView style={styles.container}>
-          <Card>
-            <Text style={{fontFamily: 'Helvetica-Regular', fontSize: 40}}>Profile</Text>
-          </Card>
+        <Text style={styles.title}>PERFIL</Text>
       </SafeAreaView>
     </BackgroundImageComponent>
   );
@@ -22,8 +20,9 @@ const ProfileScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start', // Start content from the top
     alignItems: 'center',
+    paddingHorizontal: 16, // Adds padding on the sides of the screen
   },
   welcomeText: {
     color: 'black',
@@ -57,6 +56,16 @@ const styles = StyleSheet.create({
     height: 50,
     resizeMode: 'contain',
     marginTop: 10,
+  },
+  title: {
+    fontFamily: 'FiraSans-Bold',
+    fontSize: 24,
+    color: '#000', // Text color for better visibility
+    marginTop: 20, // Adds space from the top of the screen
+    marginBottom: 20, // Adds space below the title
+    textShadowColor: '#000', // Shadow color
+    textShadowOffset: { width: 0, height: 2 }, // Offset of the shadow
+    textShadowRadius: 3, // Blur radius of the shadow
   }
 });
 
