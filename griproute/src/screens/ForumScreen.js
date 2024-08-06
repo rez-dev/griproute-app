@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'FiraSans-Bold',
-    fontSize: 24,
+    fontSize: 16,
     color: '#000', // Text color for better visibility
     marginTop: 20, // Adds space from the top of the screen
     marginBottom: 20, // Adds space below the title

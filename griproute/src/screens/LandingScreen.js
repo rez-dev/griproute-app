@@ -1,17 +1,25 @@
 import React from 'react';
 import { Text, Image, View, SafeAreaView, TouchableOpacity } from 'react-native';
-import BackgroundImageComponent from '../components/BackgroundImage';
 import { StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Card from '../components/Card';
+import BackgroundImageComponent from '../components/BackgroundImage';
 
-const ProfileScreen = () => {
+const LandingScreen = () => {
   const navigation = useNavigation();
-  
+
   return (
     <BackgroundImageComponent>
       <SafeAreaView style={styles.container}>
-        <Text style={styles.title}>PERFIL</Text>
+        <TouchableOpacity style={styles.touchableArea} onPress={() => navigation.navigate('Main')}>
+        {/* <TouchableOpacity style={styles.touchableArea}> */}
+          <View style={styles.centerContent}>
+            <Image source={require('../../assets/gp_color_white.png')} style={styles.logoImage} />
+            <Text style={styles.welcomeText}>GripRoute</Text>
+            <Text style={styles.designedByText}>Desarrollado por</Text>
+          <Text style={styles.designedByText}>Ascendify Solutions</Text>
+          <Image source={require('../../assets/as_color.png')} style={styles.companyLogo} />
+          </View>
+        </TouchableOpacity>
       </SafeAreaView>
     </BackgroundImageComponent>
   );
@@ -20,9 +28,12 @@ const ProfileScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-start', // Start content from the top
+    justifyContent: 'space-between',
+  },
+  centerContent: {
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 16, // Adds padding on the sides of the screen
   },
   welcomeText: {
     color: 'black',
@@ -30,11 +41,6 @@ const styles = StyleSheet.create({
     fontFamily: 'FiraSans-Bold',
     textAlign: 'center',
     marginTop: 20,
-  },
-  centerContent: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   logoImage: {
     width: 200,
@@ -53,20 +59,13 @@ const styles = StyleSheet.create({
   },
   companyLogo: {
     width: 100,
-    height: 50,
+    height: 70,
     resizeMode: 'contain',
     marginTop: 10,
   },
-  title: {
-    fontFamily: 'FiraSans-Bold',
-    fontSize: 16,
-    color: '#000', // Text color for better visibility
-    marginTop: 20, // Adds space from the top of the screen
-    marginBottom: 20, // Adds space below the title
-    textShadowColor: '#000', // Shadow color
-    textShadowOffset: { width: 0, height: 2 }, // Offset of the shadow
-    textShadowRadius: 3, // Blur radius of the shadow
+  touchableArea: {
+    flex: 1,
   }
 });
 
-export default ProfileScreen;
+export default LandingScreen;

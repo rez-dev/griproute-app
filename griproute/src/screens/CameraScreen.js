@@ -3,6 +3,8 @@ import { CameraView, useCameraPermissions } from 'expo-camera';
 import { StyleSheet, Text, TouchableOpacity, View, Image, SafeAreaView } from 'react-native';
 import Buttons from '../components/Buttons';
 import { usePhotoContext } from '../../PhotoContext';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import Entypo from '@expo/vector-icons/Entypo';
 
 export default function CameraScreen() {
   const [facing, setFacing] = useState('back');
@@ -52,7 +54,8 @@ export default function CameraScreen() {
           <Image source={{ uri: photo.uri }} style={styles.photo} />
           <View style={styles.resetButtonContainer}>
             <TouchableOpacity style={styles.resetButton} onPress={resetPhoto}>
-              <Text style={styles.resetButtonText}>X</Text>
+              <Entypo name="cross" size={45} color="white" />
+              {/* <Text style={styles.resetButtonText}>X</Text> */}
             </TouchableOpacity>
           </View>
         </View>
@@ -64,7 +67,8 @@ export default function CameraScreen() {
         >
           <View style={styles.topButtonContainer}>
             <TouchableOpacity style={styles.circularButton} onPress={toggleCameraFacing}>
-              <Text style={styles.circularButtonText}>XD</Text>
+              {/* <Text style={styles.circularButtonText}>XD</Text> */}
+              <FontAwesome6 name="camera-rotate" size={30} color="white" />
             </TouchableOpacity>
           </View>
           <View style={styles.bottomButtonContainer}>
@@ -95,14 +99,14 @@ const styles = StyleSheet.create({
   },
   topButtonContainer: {
     position: 'absolute',
-    top: 40,
-    right: 20,
+    bottom: 100, // Espacio desde la parte inferior
+    right: 20,  // Espacio desde la parte derecha
     alignItems: 'center',
-    zIndex: 1,
+    zIndex: 1,  // Asegura que el contenedor esté sobre otros elementos
   },
   bottomButtonContainer: {
     position: 'absolute',
-    bottom: '15%', // Adjusted from a fixed value to a percentage
+    bottom: '12%', // Adjusted from a fixed value to a percentage
     left: 0,
     right: 0,
     alignItems: 'center',
@@ -111,7 +115,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: '#007AFF',
+    backgroundColor: '#748c94',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -132,7 +136,8 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: '#007AFF',
+    // backgroundColor: '#007AFF',
+    backgroundColor: '#000',
   },
   photoContainer: {
     flex: 1,
@@ -154,7 +159,8 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    // backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    backgroundColor: '#748c94',
     justifyContent: 'center',
     alignItems: 'center',
   },
